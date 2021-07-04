@@ -1,5 +1,5 @@
 # Credit_Risk_Analysis
- Assessing individual's credit default risk with pandas, scikit-learn, and various data sampling techniques. The goal of the project is to  develop a model for predicting individual risk of default on outstanding loans. 
+ Assessing individual's credit default risk with pandas, scikit-learn, imbalanced learn, and various data sampling techniques. The goal of the project is to  develop a model for predicting individual risk of default on outstanding loans. 
 
  Models were analyzed on accuracy scores, precision, recall, and F1 scores. 
 
