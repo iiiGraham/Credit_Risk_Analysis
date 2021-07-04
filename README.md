@@ -116,9 +116,9 @@ First we oversample with SMOTE and then clean the data by dropping data points w
 
 ![SMOTEEN Combination Sampling Classification Report]("Resources/smoteen_cr.png")
 
-* Balanced accuracy score of 0.678
+* Accuracy score of 0.574
 
-The accuracy score improved to the highest score of our sampling models, slightly improving the SMOTE accuracy score. Higher accuracy could indicate SMOTEEN is a better predictor of high credit risk. 
+The accuracy score did not improve when using the SMOTEEN algorithm to select training datapoints. Because our data is imbalanced a lower accuracy score does not necessarily mean the model is worse than our previous models
 
 Precision:
 * High Risk = 0.01
