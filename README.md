@@ -10,7 +10,7 @@
 
 Our data is imbalanced so let's start with oversampling the high risk loans. 
 
-![Random Oversampling Confusion Matrix]("Resources/ros_cm.png")
+![Random Oversampling Confusion Matrix]("Resources/ros_cm.PNG")
 
 ![Random Oversampling Classification Report]("Resources/ros_cr.png")
 
