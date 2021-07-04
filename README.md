@@ -138,4 +138,76 @@ F1 Score:
 
 SMOTEEN also improved the F1 score for high risk loans. This is a positive outcome given the improvement is likely due to higher recall. It is also possible the F1 score was affected by the testing data being unbalanced compared to the previously used over and undersampling methodologies. 
 
+## Random Forest Testing
+
+### Boostrapping with Balanced Random Forest - model 5
+
+How will utilizing a random forest algorithm affect the model?
+
+The balanced random forest methodology uses bagging to run multiple decision trees and combine the results. Each decision tree is independent. 
+
+![BRF Confusion Matrix]("Resources/brf_cm.png")
+
+![BRF Classification Report]("Resources/brf_cr.png")
+
+* Accuracy score of 0.778
+
+Accuracy improved significantly when a random forest model was used. 
+
+Precision:
+* High Risk = 0.04
+* Low Risk = 1.00
+
+Precision also increased versus our over and under sampling models. The higher precision indicates the random forest model is better at predicting when a loan is actually high risk. This means more true positives and less false positives. 
+
+Recall:
+* High Risk = 0.65
+* Low Risk = 0.90
+
+Recall dropped from our SMOTEEN model. This was expected given the increase in precision. A recall of 0.65 still indicates the model does a good job of recognizing high risk loans. 
+
+F1 Score:
+* High Risk = 0.07
+* Low Risk = 0.95
+
+The random forest model improved the F1 score for high risk loans. This is a positive outcome and is likely due to the higher precision score while recall remained above the 0.5 threshold. 
+
+### Boosting with AdaBoost and Easy Ensemble - model 6
+
+What happens if we make the decision trees in our random foreset dependent on each other?
+
+Boosting passes errors from the first decision tree to the second, the second to the third, etc., until errors are minimized. Each decision tree in the forest is dependent on the last tree run.
+
+![EEC Confusion Matrix]("Resources/eec_cm.png")
+
+![EEC Classification Report]("Resources/eec_cr.png")
+
+* Accuracy score of 0.923
+
+Accuracy improved significantly with boosting. 
+
+Precision:
+* High Risk = 0.09
+* Low Risk = 1.00
+
+Precision also increased versus our previous models. The higher precision indicates the random forest model is better at predicting when a loan is actually high risk. This means more true positives and less false positives. 
+
+Recall:
+* High Risk = 0.92
+* Low Risk = 0.94
+
+Recall significantly improved versus all other models. At 0.92 we may need to perform further analysis to make sure we are not over fitting our data. On the surface, boosting looks to have significantly improved the predictability of our model. 
+
+F1 Score:
+* High Risk = 0.16
+* Low Risk = 0.97
+
+Boosting our random forest model improved the F1 score for high risk loans. This is a positive outcome given we saw improvements in our precision and recall scores. The higher F1 score provides further confidence in the boosted ensemble random forest model.  
+
+
+## Which model should we use?
+
+Based on the statistical outputs of our six models the boosted easy ensemble random forest model gives us the most confidence in our predictions. The recall scores may warrant a deeper analysis to test for over fitting, but the boosted model provides the most useful information when reviewing the risk of outstanding loans. 
+
+Higher precision means less false positives will be flagged which should save time and costs on default analysis, and high recall means the model is accurately identifying loans which are known to be high risk. This increases confidence in the model and supports the argument for its use to analyze default risk. 
 
