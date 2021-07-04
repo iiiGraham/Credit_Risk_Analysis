@@ -12,7 +12,7 @@ Our data is imbalanced so let's start with oversampling the high risk loans.
 
 ![Random Oversampling Confusion Matrix](Resources/ros_cm.PNG)
 
-![Random Oversampling Classification Report]("Resources/ros_cr.png")
+![Random Oversampling Classification Report](Resources/ros_cr.PNG)
 
 * Balanced accuracy score of 0.647
 
@@ -46,9 +46,9 @@ F1 is low for high risk classifications. This may not indicate inaccuracy becaus
 
 Will using the SMOTE algorithm for oversampling improve our model?
 
-![SMOTE Oversampling Confusion Matrix]("Resources/smote_cm.png")
+![SMOTE Oversampling Confusion Matrix](Resources/smote_cm.PNG)
 
-![SMOTE Oversampling Classification Report]("Resources/smote_cr.png")
+![SMOTE Oversampling Classification Report](Resources/smote_cr.PNG)
 
 * Balanced accuracy score of 0.662
 
@@ -78,9 +78,9 @@ What if we undersample the low risk loans?
 
 ### ClusterCentroids Undersampling- model 3
 
-![ClusterCentroids Undersampling Confusion Matrix]("Resources/cc_cm.png")
+![ClusterCentroids Undersampling Confusion Matrix](Resources/cc_cm.PNG)
 
-![ClusterCentroids Undersampling Classification Report]("Resources/cc_cr.png")
+![ClusterCentroids Undersampling Classification Report](Resources/cc_cr.PNG)
 
 * Balanced accuracy score of 0.544
 
@@ -112,9 +112,9 @@ What if we combine SMOTE with a nearest neighbors algorithm?
 
 First we oversample with SMOTE and then clean the data by dropping data points where nearest neighbors are from a different class. This model should help overcome SMOTE's potential to be affected by outliers. 
 
-![SMOTEEN Combination Sampling Confusion Matrix]("Resources/smoteen_cm.png")
+![SMOTEEN Combination Sampling Confusion Matrix](Resources/smoteen_cm.PNG)
 
-![SMOTEEN Combination Sampling Classification Report]("Resources/smoteen_cr.png")
+![SMOTEEN Combination Sampling Classification Report](Resources/smoteen_cr.PNG)
 
 * Accuracy score of 0.574
 
@@ -146,9 +146,9 @@ How will utilizing a random forest algorithm affect the model?
 
 The balanced random forest methodology uses bagging to run multiple decision trees and combine the results. Each decision tree is independent. 
 
-![BRF Confusion Matrix]("Resources/brf_cm.png")
+![BRF Confusion Matrix](Resources/brf_cm.PNG)
 
-![BRF Classification Report]("Resources/brf_cr.png")
+![BRF Classification Report](Resources/brf_cr.PNG)
 
 * Accuracy score of 0.778
 
@@ -178,9 +178,9 @@ What happens if we make the decision trees in our random foreset dependent on ea
 
 Boosting passes errors from the first decision tree to the second, the second to the third, etc., until errors are minimized. Each decision tree in the forest is dependent on the last tree run.
 
-![EEC Confusion Matrix]("Resources/eec_cm.png")
+![EEC Confusion Matrix](Resources/eec_cm.PNG)
 
-![EEC Classification Report]("Resources/eec_cr.png")
+![EEC Classification Report](Resources/eec_cr.PNG)
 
 * Accuracy score of 0.923
 
